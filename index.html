@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>The Future of Technologie &amp; Design</title>
+		<link rel="stylesheet" href="style.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Syncopate:400,700|Ubuntu" rel="stylesheet">
+        
+		<script src="jquery-3.1.1.min.js"></script>
+		<script src="jquery.smooth-scroll.min.js"></script>
+		<script src="parallax.js"></script>
+		<script src="noframework.waypoints.min.js"></script>
+		<script src="inview.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		
+        <svg style="display:none;">
+        <defs>
+            <symbol id="icon-facebook" viewBox="0 0 20 20">
+<path d="M10 0.4c-5.302 0-9.6 4.298-9.6 9.6s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6-4.298-9.6-9.6-9.6zM12.274 7.034h-1.443c-0.171 0-0.361 0.225-0.361 0.524v1.042h1.805l-0.273 1.486h-1.532v4.461h-1.703v-4.461h-1.545v-1.486h1.545v-0.874c0-1.254 0.87-2.273 2.064-2.273h1.443v1.581z"></path>
+</symbol>
+            <symbol id="icon-instagram" viewBox="0 0 20 20">
+<path d="M13 10c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-0.171 0.018-0.338 0.049-0.5h-1.049v3.997c0 0.278 0.225 0.503 0.503 0.503h6.995c0.277 0 0.502-0.225 0.502-0.503v-3.997h-1.049c0.031 0.162 0.049 0.329 0.049 0.5zM10 12c1.104 0 2-0.896 2-2s-0.896-2-2-2-2 0.896-2 2 0.896 2 2 2zM12.4 7.9h1.199c0.166 0 0.301-0.135 0.301-0.3v-1.199c0-0.166-0.135-0.301-0.301-0.301h-1.199c-0.166 0-0.301 0.135-0.301 0.301v1.199c0.001 0.165 0.136 0.3 0.301 0.3zM10 0.4c-5.302 0-9.6 4.298-9.6 9.6s4.298 9.6 9.6 9.6c5.302 0 9.6-4.298 9.6-9.6s-4.298-9.6-9.6-9.6zM15 13.889c0 0.611-0.5 1.111-1.111 1.111h-7.778c-0.611 0-1.111-0.5-1.111-1.111v-7.778c0-0.611 0.5-1.111 1.111-1.111h7.778c0.611 0 1.111 0.5 1.111 1.111v7.778z"></path>
+</symbol>
+            
+            <symbol id="icon-pinterest" viewBox="0 0 20 20">
+<path d="M10 0.4c-5.302 0-9.6 4.298-9.6 9.6s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6-4.298-9.6-9.6-9.6zM10.657 12.275c-0.616-0.047-0.874-0.352-1.356-0.644-0.265 1.391-0.589 2.725-1.549 3.422-0.297-2.104 0.434-3.682 0.774-5.359-0.579-0.975 0.069-2.936 1.291-2.454 1.503 0.596-1.302 3.625 0.581 4.004 1.966 0.394 2.769-3.412 1.55-4.648-1.762-1.787-5.127-0.041-4.713 2.517 0.1 0.625 0.747 0.815 0.258 1.678-1.127-0.25-1.464-1.139-1.42-2.324 0.069-1.94 1.743-3.299 3.421-3.486 2.123-0.236 4.115 0.779 4.391 2.777 0.309 2.254-0.959 4.693-3.228 4.517z"></path>
+</symbol>
+            <symbol id="icon-twitter" viewBox="0 0 20 20">
+<path d="M10 0.4c-5.302 0-9.6 4.298-9.6 9.6s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6-4.298-9.6-9.6-9.6zM13.905 8.264c0.004 0.082 0.005 0.164 0.005 0.244 0 2.5-1.901 5.381-5.379 5.381-1.068 0-2.062-0.312-2.898-0.85 0.147 0.018 0.298 0.025 0.451 0.025 0.886 0 1.701-0.301 2.348-0.809-0.827-0.016-1.525-0.562-1.766-1.312 0.115 0.021 0.233 0.033 0.355 0.033 0.172 0 0.34-0.023 0.498-0.066-0.865-0.174-1.517-0.938-1.517-1.854v-0.023c0.255 0.141 0.547 0.227 0.857 0.237-0.508-0.34-0.841-0.918-0.841-1.575 0-0.346 0.093-0.672 0.256-0.951 0.933 1.144 2.325 1.896 3.897 1.977-0.033-0.139-0.049-0.283-0.049-0.432 0-1.043 0.846-1.891 1.891-1.891 0.543 0 1.035 0.23 1.38 0.598 0.431-0.086 0.835-0.242 1.2-0.459-0.141 0.441-0.44 0.812-0.831 1.047 0.383-0.047 0.747-0.148 1.086-0.299-0.253 0.379-0.574 0.713-0.943 0.979z"></path>
+</symbol>
+        </defs>
+        </svg>
+        
+        
+        <nav>
+			<ul>
+				<li><a href="#hero" class="smooth">Home</a></li>
+				<li><a href="#about" class="smooth">About</a></li>
+                <li><a href="#about2" class="smooth">Program</a></li>
+				<li><a href="#speakers" class="smooth">Speakers</a></li>
+                <li><a href="#map" class="smooth">Map</a></li>
+			</ul>
+		</nav><!-- nav ends here -->
+		
+		<section id="hero">
+			<header>
+			</header>
+			<img src="images/Description.jpg" style="margin-top:3%;" id ="about" alt="" width="100%"	>
+			<div class="intro">
+				
+				
+			
+			</div>
+		</section>
+		
+		<section id="about2">
+			
+			<div>
+				
+				<article class="program" id="program">
+					<div id="day1">
+                    </div>
+					<div id="day2">
+					</div>
+				</article>
+			
+				
+			</div>
+		</section>
+        
+   
+		
+		<section id="speakers" style="margin-top:13%;">
+		
+
+
+		<div>
+
+			<article>
+				<div><img src="images/fred.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>George Allen</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em">Prague College Head of the School of Art and Design George used to have a beard. I don’t know more about George but he looks cool. Oh yeah rumour has it he is killing it in the field of photography.</p>
+				</div>
+			</article>
+
+			<article>
+				<div><img src="images/bambam.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>Stefano Cavagnetto</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em"> Prague College Head of the School of Business Stefano is a teacher at IT I guess, don’t know much abou him either except the fact that he looks exactly like a Greek actor .</p>
+				</div>
+			</article>
+
+			<article>
+				<div><img src="images/peter.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>veronika Douchova</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em"> Prague College - Head of School of Media & IT Veronika works at Prague College she is brunette and that is all of it I guess</p>
+				</div>
+			</article>
+
+			<article>
+				<div><img src="images/homer.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>Tim Cook</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em">Chief Executive Officer of Apple Inc Tim is the new Steve Jobs, well he wishes cause jhe only runs the company without the vision of Jobs. Both being corporate bastards, at least Steve tried to make sth great in terms of technological advancments.</p>
+				</div>
+			</article>
+			
+           <article>
+				<div><img src="images/steve.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>Jonathan Ive</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em"> Chief Design Officer of Apple Inc Jonathan works for Apple since your before your Granda got rid of his diapers. He talks like Obama in his videos (spitting general truth in order to avoid the question)</p>
+				</div>
+			</article>
+
+			<article>
+				<div><img src="images/cartman.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>Marissa Mayer</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em">Chief Executive Officer of Yahoo! Marissa works for Yahoo, the company as we learned got sold to Verizon for the ridiculous amount of 4 billion(LMAO). The company bankrupt so I wouldn’t really care to hear what she says.</p>
+				</div>
+			</article>
+
+			<article>
+				<div><img src="images/wilma.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>Elon Musk</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em"> CEO of SpaceX Elon Musk is propably the Nikola Tesla of our time(get it ? because he makes TESLA cars). His devotion and the pation for what he does are really inspiring.<p>
+				</div>
+			</article>
+
+			<article>
+				<div><img src="images/marge.jpg" alt="" class="speakers"></div>
+				<div>
+					<h2>Sheryl Sandberg</h2>
+					<p style="font-family: 'Ubuntu', sans-serif; font-size:1.3em">Chief Operating Officer of Facebook She propably works there to facebook stalk her ex cause you can tell she is holding a grudge. She might have sth good to say</p>
+				</div>
+			</article>
+
+		</div>
+	</section><!-- /speakers -->
+		
+		<section id="map">
+			
+			<div id="gmap"></div>
+		</section>
+	
+		<footer>
+            
+            <ul class="social">
+                <li><a href="https://www.facebook.com/"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>
+                <li><a href="https://www.instagram.com/"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a></li>
+                <li><a href="https://www.pinterest.com/"><svg class="icon icon-pinterest"><use xlink:href="#icon-pinterest"></use></svg></a></li>
+                <li><a href="https://twitter.com/"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
+        
+            </ul>
+            <p style="color:white;">Design by <a href="#"> Dimitri Blako</a></p>
+		
+		</footer>
+        
+        
+		
+		
+		
+		
+	</body>
+</html>
